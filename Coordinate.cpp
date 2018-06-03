@@ -1,14 +1,14 @@
 #include "Coordinate.h"
 
-Coordinate::Coordinate(uint i,uint j){
+Coordinate::Coordinate(unsigned int i,unsigned int j){
 	this->x=i;
 	this->y=j;
 }
 
 Coordinate::Coordinate(int i,int j){
 	
-	i=(uint)i;
-	j=(uint)j;
+	i=(unsigned int)i;
+	j=(unsigned int)j;
 	this->x=i;
 	this->y=j;
 }
