@@ -29,8 +29,8 @@ public:
 	Board(const Board&);
 	~Board();
 	
-	void makeO(RGB rgb[] ,int row, int col, int numPixel);
-	void makeX(RGB rgb[], int col, int row, int numPixel);
+	void drawO(RGB rgb[] ,int row, int col, int numPixel);
+	void drawX(RGB rgb[], int col, int row, int numPixel);
 	void makeTable(RGB rgb[], int numPixel);
 	
 	part& operator [](Coordinate c);
@@ -38,7 +38,7 @@ public:
 	Board& operator =(Board&);
 	
 	friend ostream& operator <<(ostream&, const Board&);
-	friend std::istream& operator>> (std::istream &input, Board& board);
+	friend istream& operator>> (istream &input, Board& board);
 	
 	string draw(int pixel);
 };
