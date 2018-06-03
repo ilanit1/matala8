@@ -3,6 +3,6 @@ class Coordinate{
 	public:
 		unsigned int x;
 		unsigned int y;
-		Coordinate(uint,uint);
+		Coordinate(unsigned int,unsigned int);
 		Coordinate(int,int);
 };
