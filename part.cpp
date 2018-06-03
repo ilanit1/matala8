@@ -30,11 +30,11 @@ ostream & operator<<(ostream & os, const part & s) {
 	return os;
 }
 
-square::operator char() const {
+part::operator char() const {
 	return c;
 }
 
-bool operator==(square& s, char c){
+bool operator==(part& s, char c){
 	
 	if(s.get()==c) return true;
 	return false;
