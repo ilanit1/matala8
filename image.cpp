@@ -67,7 +67,7 @@ void Board::makeO(RGB rgb[] ,int row, int col, int numPixel){
 		for(int j=Xstart; j<Xend; j++){
 			
 			int length=sqrt((i-Ycenter)*(i-Ycenter)+(j-Xcenter)*(j-Xcenter));
-			if(length==radius) rgb[i*numPixel+j].red=255;
+			if(length==radius) rgb[i*numPixel+j].green=255;
 		}
 	}
 }
