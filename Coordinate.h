@@ -1,8 +1,8 @@
 class Coordinate{
 	
 	public:
-		uint x;
-		uint y;
+		unsigned int x;
+		unsigned int y;
 		Coordinate(uint,uint);
 		Coordinate(int,int);
 };
