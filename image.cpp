@@ -1,8 +1,9 @@
 #include "Board.h"
+using namespace std;
 
-std::istream& operator>> (std::istream &input, Board& board){
+istream& operator>> (istream &input, Board& board){
 	
-	std::string str;
+	string str;
 	uint size = 0, raw = 0;
 	input >> str;
 	size = str.length();
@@ -58,7 +59,7 @@ void Board::makeTable(RGB rgb[] , int numPixel){
 	}
 }
 
-void Board::makeO(RGB rgb[] ,int row, int col, int numPixel){
+void Board::drawO(RGB rgb[] ,int row, int col, int numPixel){
 	
 	int Ycenter= (row+0.5)*numPixel/this->size, Xcenter=(col+0.5)*numPixel/this->size;
 	int radius=(numPixel/this->size)/4;
@@ -74,7 +75,7 @@ void Board::makeO(RGB rgb[] ,int row, int col, int numPixel){
 	}
 }
 
-void Board::makeX(RGB rgb[], int row, int col, int numPixel){
+void Board::drawX(RGB rgb[], int row, int col, int numPixel){
 	
 	int Ystart=(row+0.25)*numPixel/this->size, Xstart=(col+0.25)*numPixel/this->size;
 	int Xend=(col+0.75)*numPixel/this->size;   
@@ -105,9 +106,9 @@ string Board::draw(int numPixel){
 		for(int j=0;j<this->size;j++)	{
 			
 			if(board[i][j]=='X')
-				makeX(rgb, i, j, numPixel);
+				drawX(rgb, i, j, numPixel);
 			else if(board[i][j]=='O')
-				makeO(rgb, i, j, numPixel);
+				drawO(rgb, i, j, numPixel);
 			
 		}
 	}
