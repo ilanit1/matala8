@@ -78,15 +78,15 @@ void Board::makeX(RGB rgb[], int row, int col, int numPixel){
 	int Xend=(col+0.75)*numPixel/this->size;   
 	
 	for(int i=0; i<0.5*numPixel/this->size; i++){
-		rgb[(i+Ystart)*numPixel+Xstart+i-1].green=255;
-		rgb[(i+Ystart)*numPixel+Xstart+i].green=255;
-		rgb[(i+Ystart)*numPixel+Xstart+i+1].green=255;
+		rgb[(i+Ystart)*numPixel+Xstart+i-1].blue=255;
+		rgb[(i+Ystart)*numPixel+Xstart+i].blue=255;
+		rgb[(i+Ystart)*numPixel+Xstart+i+1].blue=255;
 	}
 	for(int i=0; i<0.5*numPixel/this->size; i++){
 		
-		rgb[(i+Ystart)*numPixel+Xend-i-1].green=255;
-		rgb[(i+Ystart)*numPixel+Xend-i].green=255;
-		rgb[(i+Ystart)*numPixel+Xend-i+1].green=255;
+		rgb[(i+Ystart)*numPixel+Xend-i-1].blue=255;
+		rgb[(i+Ystart)*numPixel+Xend-i].blue=255;
+		rgb[(i+Ystart)*numPixel+Xend-i+1].blue=255;
 	}
 }
 
