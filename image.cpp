@@ -8,13 +8,14 @@ std::istream& operator>> (std::istream &input, Board& board){
 	size = str.length();
 	Board b(size);
 	board=b;
-	while (input)
-	{
-		for (uint j = 0; j < size; j++)
-		{
+	
+	while (input){
+		
+		for (uint j = 0; j < size; j++){
 			Coordinate c{raw, j};		
 			board[c] = str[j];
 		}
+		
 		input >> str;
 		raw++;
 	}
@@ -26,14 +27,14 @@ string name(){
 	int i=0;
 	string s;
 	bool flag=true;
-	while(flag)	{
+	
+	while(flag){
 		
-		ifstream ifile("pic_"+ to_string(i)+".ppm");
+		ifstream ifile("picture"+ to_string(i)+".ppm");
 		if(ifile) i++;
 		else flag=false;
 	}
-	return "pic_"+ to_string(i)+".ppm";
-	
+	return "picture"+ to_string(i)+".ppm";	
 }
 
 void Board::makeTable(RGB rgb[] , int numPixel){
@@ -93,21 +94,19 @@ void Board::makeX(RGB rgb[], int row, int col, int numPixel){
 string Board::draw(int numPixel){
 	
 	string filename=name();
-	
 	ofstream imageFile(filename, ios::out | ios::binary);
 	
 	imageFile << "P6" << endl << numPixel <<" " << numPixel << endl << 255 << endl;
-	
 	RGB rgb[numPixel*numPixel];
-	
 	makeTable(rgb, numPixel);
 	
 	for(int i=0;i<this->size;i++)	{
 		for(int j=0;j<this->size;j++)	{
 			
-			if(board[i][j]=='X') makeX(rgb, i, j, numPixel);
-			
-			else if(board[i][j]=='O')makeO(rgb, i, j, numPixel);
+			if(board[i][j]=='X')
+				makeX(rgb, i, j, numPixel);
+			else if(board[i][j]=='O')
+				makeO(rgb, i, j, numPixel);
 			
 		}
 	}
