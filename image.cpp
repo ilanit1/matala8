@@ -45,9 +45,9 @@ void Board::makeTable(RGB rgb[] , int numPixel){
 			rgb[i*numPixel+j*numPixel/this->size].green=255;
 			rgb[i*numPixel+j*numPixel/this->size].blue=255;
 			rgb[i*numPixel+j*numPixel/this->size].red=255;*/
-			rgb[i*numPixel+j*numPixel/this->size]=255;
-			rgb[i*numPixel+j*numPixel/this->size]=255;
-			rgb[i*numPixel+j*numPixel/this->size]=255;
+			rgb[i*numPixel+j*numPixel/this->size].red=255;
+			rgb[i*numPixel+j*numPixel/this->size].red=255;
+			rgb[i*numPixel+j*numPixel/this->size].red=255;
 		}
 	}
 	for(int i=1; i<this->size; i++){
@@ -56,9 +56,9 @@ void Board::makeTable(RGB rgb[] , int numPixel){
 			rgb[i*numPixel*numPixel/this->size +j].green=255;
 			rgb[i*numPixel*numPixel/this->size +j].blue=255;
 			rgb[i*numPixel*numPixel/this->size +j].red=255;*/
-			rgb[i*numPixel*numPixel/this->size +j]=255;
-			rgb[i*numPixel*numPixel/this->size +j]=255;
-			rgb[i*numPixel*numPixel/this->size +j]=255;
+			rgb[i*numPixel*numPixel/this->size +j].red=255;
+			rgb[i*numPixel*numPixel/this->size +j].red=255;
+			rgb[i*numPixel*numPixel/this->size +j].red=255;
 		}
 	}
 }
